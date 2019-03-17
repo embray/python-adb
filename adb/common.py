@@ -304,6 +304,7 @@ class TcpHandle(object):
 
         if ':' in serial:
             self.host, self.port = serial.split(':')
+            self.port = int(self.port)
         else:
             self.host = serial
             self.port = 5555
